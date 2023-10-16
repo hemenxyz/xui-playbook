@@ -6,7 +6,7 @@
     custom_domain: "{{ custom_domain }}"  
   tasks:
     - name: Run the Bash Command
-      shell: "bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.sh)"
+      shell: "curl -o install.sh https://raw.githubusercontent.com/alireza0/x-ui/master/install.sh && chmod +x install.sh && ./install.sh"
     
     - name: Install core via Snap
       shell: "snap install core; snap refresh core"
