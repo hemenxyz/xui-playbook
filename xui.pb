@@ -13,7 +13,7 @@
         command: "sh -c 'curl -o install.sh https://raw.githubusercontent.com/alireza0/x-ui/master/install.sh && chmod +x install.sh && ./install.sh'"
 
         responses:
-          'Do you want to continue with the modification [y/n]? :': 'y\n'
+          "Do you want to continue with the modification \\[y/n\\]\\? :.*": "y\n"
           'Please set up your username:': '{{ panel_username }}\n'
           'Please set up your password:': '{{ panel_password }}\n'
           'Please set up the panel port:': '{{ panel_port }}\n'
