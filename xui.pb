@@ -29,4 +29,4 @@
       shell: "ln -s /snap/bin/certbot /usr/bin/certbot"
 
     - name: Obtain Let's Encrypt SSL Certificate
-      shell: "certbot certonly --standalone --register-unsafely-without-email --non-interactive --agree-tos -d {{ custom_domain }}"
+      shell: "certbot certonly --standalone --register-unsafely-without-email --non-interactive --agree-tos -d {{ panel_domain }}"
