@@ -20,6 +20,10 @@
       register: script_output
       changed_when: false
 
+    - name: Debug script output
+      debug:
+        var: script_output.stdout_lines
+
     - name: Install core via Snap
       shell: "snap install core; snap refresh core"
 
@@ -31,3 +35,4 @@
 
     - name: Obtain Let's Encrypt SSL Certificate
       shell: "certbot certonly --standalone --register-unsafely-without-email --non-interactive --agree-tos -d {{ panel_domain }}"
+
