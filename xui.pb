@@ -19,6 +19,8 @@
           'Please set up the panel port:': '{{ panel_port }}\n'
       register: script_output
       changed_when: false
+      ignore_errors: yes
+      timeout: 300  # Set the timeout to 300 seconds (5 minutes)
 
     - name: Debug script output
       debug:
