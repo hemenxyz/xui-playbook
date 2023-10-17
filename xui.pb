@@ -10,7 +10,8 @@
   tasks:
     - name: Run the Bash Command
       expect:
-        command: "curl -o install.sh https://raw.githubusercontent.com/alireza0/x-ui/master/install.sh && chmod +x install.sh && ./install.sh"
+        command: "sh -c 'curl -o install.sh https://raw.githubusercontent.com/alireza0/x-ui/master/install.sh && chmod +x install.sh && ./install.sh'"
+
         responses:
           'Do you want to continue with the modification [y/n]?': 'y\n'
           'Please set up your username:': '{{ panel_username }}\n'
